@@ -26,6 +26,7 @@ public class PlayerReflect : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            PlayerControlScriptWithRgidBody.velocity = Vector3.zero;
         }
     }
 }
