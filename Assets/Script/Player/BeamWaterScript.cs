@@ -6,8 +6,6 @@ public class BeamWaterScript : MonoBehaviour
 {
     public GameObject explosion;
     private GameObject BeamPoint;
-    //[SerializeField] float delete_time;
-    //float elapsed_time = 0;
 
     private void Start()
     {
@@ -26,7 +24,6 @@ public class BeamWaterScript : MonoBehaviour
             Destroy(gameObject);
             Instantiate(explosion, other.gameObject.transform.position, Quaternion.identity);
             GetComponent<Rigidbody>().velocity = Vector3.zero;
-            //elapsed_time = delete_time;
             //Destroy(other.gameObject);
         }
 
@@ -36,7 +33,6 @@ public class BeamWaterScript : MonoBehaviour
             BossHp.Damage(100);
             Destroy(gameObject);
             GetComponent<Rigidbody>().velocity = Vector3.zero;
-            //elapsed_time = delete_time;
             Debug.Log("HitBoss");
             BossScript.wave_set();
         }

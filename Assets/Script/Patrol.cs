@@ -10,7 +10,6 @@ public class Patrol : MonoBehaviour
     private GameObject player;
     private int destPoint = 0;
     private NavMeshAgent agent;
-    public static bool homing_on;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +26,6 @@ public class Patrol : MonoBehaviour
 
         player = GameObject.FindWithTag("GameController");
         GotoNextPoint();
-        homing_on = false;
     }
 
     void GotoNextPoint()
@@ -50,7 +48,7 @@ public class Patrol : MonoBehaviour
     void Update()
     {
 
-        if (Vector3.Distance(transform.position, player.transform.position) < desitance || homing_on) 
+        if (Vector3.Distance(transform.position, player.transform.position) < desitance ) 
         {
             agent.destination = player.transform.position;
 
