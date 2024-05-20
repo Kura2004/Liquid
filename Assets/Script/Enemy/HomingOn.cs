@@ -10,7 +10,7 @@ public class HomingOn : MonoBehaviour
         {
             AudioSource audio = GetComponent<AudioSource>();
             audio.PlayOneShot(audio.clip);
-            Patrol.homing_on = true;
+            //Patrol.homing_on = true;
         }
     }
 
@@ -18,7 +18,7 @@ public class HomingOn : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Patrol.homing_on = false;
+            //Patrol.homing_on = false;
         }
     }
 }
