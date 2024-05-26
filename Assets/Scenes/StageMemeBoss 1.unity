@@ -539,8 +539,8 @@ MonoBehaviour:
   - {fileID: 1033796422506407603, guid: 64485ee745a91b54d9cb301350021ddd, type: 3}
   BeamPoint: {fileID: 222567224}
   Player: {fileID: 1654929794}
-  destroy_time: 10
-  shoot_interval: 1
+  destroy_time: 3
+  shoot_interval: 0.3
   reversal: 0
 --- !u!1 &223921568
 GameObject:
@@ -773,8 +773,8 @@ MonoBehaviour:
   - {fileID: 1033796422506407603, guid: 64485ee745a91b54d9cb301350021ddd, type: 3}
   BeamPoint: {fileID: 389101719}
   Player: {fileID: 209835123}
-  destroy_time: 10
-  shoot_interval: 1
+  destroy_time: 3
+  shoot_interval: 0.3
   reversal: 0
 --- !u!54 &389101721
 Rigidbody:
