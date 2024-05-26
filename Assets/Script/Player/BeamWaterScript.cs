@@ -5,12 +5,6 @@ using UnityEngine;
 public class BeamWaterScript : MonoBehaviour
 {
     public GameObject explosion;
-    private GameObject BeamPoint;
-
-    private void Start()
-    {
-        BeamPoint = GameObject.FindWithTag("BeamPoint");
-    }
 
     private void Update()
     {
