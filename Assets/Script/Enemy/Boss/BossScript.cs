@@ -28,7 +28,7 @@ public class BossScript : MonoBehaviour
         if (time > attack_time)
         {
             time = 0;
-            int select = 1;// (int)Random.Range(1.0f, 5.0f);
+            int select = (int)Random.Range(1.0f, 5.0f);
             Debug.Log("" + select);
 
             switch (select)
