@@ -8,6 +8,7 @@ public class PlayerLook : MonoBehaviour
     [SerializeField]
     private Transform obj;
     [SerializeField] bool reversal = false;
+    [SerializeField] bool freeze_x = false;
 
     private void Start()
     {
@@ -24,6 +25,13 @@ public class PlayerLook : MonoBehaviour
         if (reversal)
         {
             obj.Rotate(0, 180, 0);
+        }
+
+        if (freeze_x)
+        {
+            Vector3 c = obj.localEulerAngles;
+            c.x = 0;
+            obj.localEulerAngles = c;
         }
     }
 }
