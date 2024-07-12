@@ -6,14 +6,12 @@ using UnityEngine;
 public class Battery : MonoBehaviour
 {
     [SerializeField] float power = 10f;
-    [SerializeField] public GameObject[] beam;
+    [SerializeField] GameObject[] beam;
     [SerializeField] Transform BeamPoint;
-    [SerializeField] public Transform Player;
+    [SerializeField] GameObject battery;
     [SerializeField] float destroy_time;
     [SerializeField] float shoot_interval;
     float elapsed_time = 0;
-    [SerializeField] bool reversal = false;
-    private GameObject Gas;
 
     private void Start()
     {
@@ -37,15 +35,11 @@ public class Battery : MonoBehaviour
      Quaternion.identity) as GameObject;
 
         PlayerShoot.GetComponent<Rigidbody>().AddForce(
-            (BeamPoint.position - (Player.position)).normalized * power + GetComponent<Rigidbody>().velocity, ForceMode.Impulse);
+            (BeamPoint.position - (battery.transform.position)).normalized * power + GetComponent<Rigidbody>().velocity, ForceMode.Impulse);
         //AddForce(
         //transform.TransformDirection(power * Vector3.Lerp(BeamPoint.position, Player.transform.position, 1.0f).normalized));
 
         PlayerShoot.transform.rotation = Quaternion.LookRotation(PlayerShoot.transform.position - BeamPoint.transform.position);
-        if (reversal)
-        {
-            PlayerShoot.transform.Rotate(0, 180, 0);
-        }
 
         Destroy(PlayerShoot, destroy_time);
         Se.Shoot();

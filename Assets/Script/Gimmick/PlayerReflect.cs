@@ -29,4 +29,28 @@ public class PlayerReflect : MonoBehaviour
             PlayerControlScriptWithRgidBody.velocity = Vector3.zero;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            save_v = PlayerControlScriptWithRgidBody.velocity;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            other.transform.localPosition -= 3.0f * save_v * Time.deltaTime;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            PlayerControlScriptWithRgidBody.velocity = Vector3.zero;
+        }
+    }
 }

@@ -30,5 +30,10 @@ public class BeamWaterScript : MonoBehaviour
             Debug.Log("HitBoss");
             BossScript.wave_set();
         }
+
+        if (other.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
     }
 }

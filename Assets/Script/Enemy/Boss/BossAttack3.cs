@@ -66,5 +66,10 @@ public class BossAttack3 : MonoBehaviour
             PlayerHp.Damage(300);
             rb.velocity = transform.TransformDirection(Vector3.back) * 15.0f;
         }
+
+        if (collision.gameObject.tag == "Wall")
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 }

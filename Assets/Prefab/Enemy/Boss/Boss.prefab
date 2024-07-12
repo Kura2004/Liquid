@@ -250,11 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814796e86a538b24a9c44233f43cc7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - {fileID: 8797279491081527913, guid: 912072eb459426a468613a214f305bf6, type: 3}
-  - {fileID: 6405813402996959599, guid: 65471f1c5f1b80647a4e1ab6fd01cc1f, type: 3}
-  - {fileID: 4204376710709601184, guid: 0368f4dc325538a418fe7c7c46447f1c, type: 3}
-  - {fileID: 3963506794860349966, guid: add9fa5777cafe94a8333255f474a870, type: 3}
+  points: []
   desitance: 0
 --- !u!195 &8179269650448770204
 NavMeshAgent:
