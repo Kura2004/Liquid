@@ -28,12 +28,10 @@ public class BossAttack1 : MonoBehaviour
 
         if (time > end_time * 0.7 && attack_effect != null)
         {
-            attack_effect.transform.localScale -= new Vector3(1, 0, 1);
+            attack_effect.transform.localScale -= new Vector3(1, 0, 1) * 500.0f * Time.deltaTime;
 
             if (attack_effect.transform.localScale.x < 0.1f)
                 Destroy(attack_effect);
-
-
         }
 
         if (time > end_time)

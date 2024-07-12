@@ -78,6 +78,10 @@ public class BossAttack4 : MonoBehaviour
             GetComponentAll();
         }
 
+        if (collision.gameObject.tag == "Wall")
+        {
+            rb.velocity = Vector3.zero;
+        }
     }
 
     private void OnCollisionStay(Collision collision)
